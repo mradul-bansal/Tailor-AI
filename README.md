@@ -42,7 +42,7 @@ git lfs install
 
 Due to GitHub's size limitations, the complete project files (e.g., model weights, AI scripts, large assets) are stored in Google Drive.
 
-🔗 **Download the full project files here**: [Google Drive Link]([https://drive.google.com/your-download-link](https://drive.google.com/drive/folders/1VkXjLzHTr7LRP3S5m4pXIR-dcHl4vxjT?usp=drive_link))
+🔗 **Download the full project files here**: [Google Drive Link]([https://drive.google.com/drive/folders/1VkXjLzHTr7LRP3S5m4pXIR-dcHl4vxjT?usp=drive_link])
 
 After downloading:
 
