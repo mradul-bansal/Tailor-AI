@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ECE7D5; /* Light background */
+    color: #703E29; /* Dark text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color: #98572A; /* Main title color */
+}
+
+form {
+    background-color: #F2E2C9; /* Form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Maximum width for form */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align input fields */
+}
+
+label {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #703E29; /* Label color */
+    font-weight: bold;
+    text-align: center; /* Center the label text */
+}
+
+input {
+    width: 90%; /* Smaller width to provide space on the sides */
+    padding: 10px;
+    border: 1px solid #DCA977; /* Input border color */
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center; /* Center the input text */
+}
+
+button {
+    background-color: #98572A; /* Button background */
+    color: #F2E2C9; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%; /* Full-width button with smaller width for alignment */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #703E29; /* Darker shade on hover */
+}

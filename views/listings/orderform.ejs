@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="/css/orderform.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Place Your Order</h1>
+    
+    <form action="/place-order" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode" name="pincode" required>
+    
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+    
+      <button type="submit">Place Order</button>
+    </form>
+    
+
+    <h2>Your Orders</h2>
+    <ul>
+      <% orders.forEach(order => { %>
+        <li>
+          <p><strong>Order ID:</strong> <%= order._id %></p>
+          <p><strong>Name:</strong> <%= order.name %></p>
+          <p><strong>Email:</strong> <%= order.email %></p>
+          <p><strong>Phone:</strong> <%= order.phone %></p>
+          <p><strong>Pincode:</strong> <%= order.pincode %></p>
+          <p><strong>Address:</strong> <%= order.address %></p>
+          <p><strong>Date:</strong> <%= order.date %></p>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

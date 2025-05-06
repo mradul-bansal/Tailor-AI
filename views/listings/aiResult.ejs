@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Measurement Results</title>
+    <link rel="stylesheet" href="/css/airesult.css">
+</head>
+<body>
+    <h1>AI Measurements for <%= productName %></h1>
+
+    <table>
+        <tr><th>Shoulder Width</th><td><%= measurements.shoulder_width.toFixed(2) %> cm</td></tr>
+        <tr><th>Torso Length</th><td><%= measurements.torso_length.toFixed(2) %> cm</td></tr>
+        <tr><th>Leg Length</th><td><%= measurements.leg_length.toFixed(2) %> cm</td></tr>
+        <tr><th>Hip Width</th><td><%= measurements.hip_width.toFixed(2) %> cm</td></tr>
+    </table>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

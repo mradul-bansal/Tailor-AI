@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capture Measurement</title>
+</head>
+<body>
+    <h1>Capture Your Image</h1>
+
+    <video id="video" width="320" height="240" autoplay></video>
+    <br>
+    <button id="capture">Capture</button>
+    <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+
+    <script>
+        // Access webcam
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                console.error("Error accessing camera:", err);
+            });
+
+        // Capture image and send
+        document.getElementById('capture').addEventListener('click', () => {
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            const imageData = canvas.toDataURL('image/jpeg');
+
+            // Send base64 image to Flask backend
+            fetch('http://localhost:5000/measure', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ image_data: imageData })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Measurements received:", data.measurements);
+                alert("Measurements captured successfully! Check console.");
+            })
+            .catch(err => {
+                console.error("Error sending image to server:", err);
+            });
+        });
+    </script>
+</body>
+</html>

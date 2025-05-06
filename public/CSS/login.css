@@ -1,0 +1,62 @@
+/* public/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ECE7D5; /* Light greyish background matching previous page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #F2E2C9; /* White background for the form container */
+    padding: 30px; /* Slightly more padding for better spacing */
+    border-radius: 8px; /* Softer rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    width: 350px; /* Slightly wider for better layout */
+}
+
+h2 {
+    text-align: center;
+    color: #98572A; /* Darker color for the heading */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #703E29; /* Darker grey for label text */
+    font-weight: bold; /* Bold label for readability */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Slightly more padding */
+    margin-bottom: 15px;
+    border: 1px solid #DCA977; /* Softer grey border */
+    border-radius: 4px;
+    background-color: #ECE7D5; /* Light grey input background */
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* More padding for the button */
+    background-color: #98572A; /* Consistent muted color for button */
+    border: none;
+    color: #F2E2C9;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Font size for better readability */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #703E29; /* Darker color for hover state */
+}
+
+p {
+    text-align: center;
+    color: #98572A; /* Dark color for paragraph text */
+    margin-top: 15px;
+}

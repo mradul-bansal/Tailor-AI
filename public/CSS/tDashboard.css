@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e2c9;
+    color: #703e29;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ece7d5;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #98572a;
+    margin-bottom: 30px;
+  }
+  
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .customer-table th,
+  .customer-table td {
+    padding: 15px;
+    border: 1px solid #98572a;
+  }
+  
+  .customer-table th {
+    background-color: #98572a;
+    color: #f2e2c9;
+  }
+  
+  .customer-table tr:nth-child(even) {
+    background-color: #dca977;
+  }
+  
+  .customer-table tr:hover {
+    background-color: #703e29;
+    color: #f2e2c9;
+  }
+  

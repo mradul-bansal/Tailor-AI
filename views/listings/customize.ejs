@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize Your <%= productName %></title>
+    <link rel="stylesheet" href="/css/customize.css">
+
+</head>
+<body>
+    <h1>Customize Your <%= productName %></h1>
+
+    <!-- Show the image clicked -->
+    <img src="/assets/<%= image %>" alt="Selected Item" style="max-width:300px;">
+
+    <hr>
+
+    <!-- Form for Manual Measurements -->
+    <% if (item === "upperwear") { %>
+        <form action="/submit-measurements" method="POST">
+            <input type="hidden" name="item" value="upperwear">
+            <input type="hidden" name="productName" value="<%= productName %>">
+            <input type="hidden" name="image" value="<%= image %>">
+
+            <label>Size:</label>
+            <input type="text" name="size" required><br>
+
+            <label>Chest (in):</label>
+            <input type="number" name="chest" required><br>
+
+            <label>Front Length (in):</label>
+            <input type="number" name="frontLength" required><br>
+
+            <label>Across Shoulder (in):</label>
+            <input type="number" name="shoulder" required><br>
+
+            <label>Waist (in):</label>
+            <input type="number" name="waist" required><br>
+
+            <label>Sleeve-Length (in):</label>
+            <input type="number" name="sleeveLength" required><br>
+
+            <button type="submit">Submit Measurements</button>
+        </form>
+
+    <% } else if (item === "bottomwear") { %>
+        <form action="/submit-measurements" method="POST">
+            <input type="hidden" name="item" value="bottomwear">
+            <input type="hidden" name="productName" value="<%= productName %>">
+            <input type="hidden" name="image" value="<%= image %>">
+
+            <label>Size:</label>
+            <input type="text" name="size" required><br>
+
+            <label>To Fit Waist (in):</label>
+            <input type="number" name="waistFit" required><br>
+
+            <label>Inseam Length (in):</label>
+            <input type="number" name="inseam" required><br>
+
+            <button type="submit">Submit Measurements</button>
+        </form>
+    <% } %>
+
+    <hr>
+
+    <!-- Section for AI Prediction -->
+    <h2>Or Use AI to Auto-Detect Measurements</h2>
+
+    <form action="/capture" method="POST" enctype="multipart/form-data">
+        <input type="file" name="aiImage" accept="image/*" capture="environment" required>
+        <input type="hidden" name="item" value="<%= item %>">
+        <input type="hidden" name="productName" value="<%= productName %>">
+        <button type="submit">Use Camera and AI</button>
+    </form>
+
+</body>
+</html>

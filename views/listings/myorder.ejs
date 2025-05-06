@@ -1,0 +1,17 @@
+<!-- myOrders.ejs -->
+<section class="orders-section">
+    <h2>Your Orders</h2>
+    <% if (orders.length > 0) { %>
+        <ul class="orders-list">
+            <% orders.forEach(order => { %>
+                <li>
+                    <h3>Order ID: <%= order._id %></h3>
+                    <p>Status: <%= order.status %></p>
+                    <p>Details: <%= order.details %></p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>You have no orders yet.</p>
+    <% } %>
+</section>

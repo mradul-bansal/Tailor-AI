@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Items</title>
+    <link rel="stylesheet" href="/css/menItems.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Men's Collection</h1>
+        <div class="card-container">
+            <!-- Trousers -->
+            <div class="card">
+                <img src="/assets/menstrouser.jpeg" alt="Trousers">
+                <h2>Trousers</h2>
+                <p>Discover our collection of stylish trousers for every occasion.</p>
+                <p class="price-range">Price: ₹1000 - ₹1300</p>
+                
+                <form action="/customize" method="GET">
+                    <input type="hidden" name="item" value="bottomwear">
+                    <input type="hidden" name="productName" value="Trousers">
+                    <input type="hidden" name="image" value="menstrouser.jpeg">
+                    <button type="submit" class="customize-button">Customize Now</button>
+                </form>
+            </div>
+
+            <!-- Shirts -->
+            <div class="card">
+                <img src="/assets/mensshirt.jpeg" alt="Shirts">
+                <h2>Shirts</h2>
+                <p>Browse our wide range of high-quality shirts for men.</p>
+                <p class="price-range">Price: ₹600 - ₹800</p>
+                
+                <form action="/customize" method="GET">
+                    <input type="hidden" name="item" value="upperwear">
+                    <input type="hidden" name="productName" value="Shirts">
+                    <input type="hidden" name="image" value="mensshirt.jpeg">
+                    <button type="submit" class="customize-button">Customize Now</button>
+                </form>
+            </div>
+
+            <!-- Suits -->
+            <div class="card">
+                <img src="/assets/menssuits.jpg" alt="Suits">
+                <h2>Suits</h2>
+                <p>Elegant suits that fit every event and occasion.</p>
+                <p class="price-range">Price: ₹2500 - ₹3000</p>
+                
+                <form action="/customize" method="GET">
+                    <input type="hidden" name="item" value="upperwear">
+                    <input type="hidden" name="productName" value="Suits">
+                    <input type="hidden" name="image" value="menssuits.jpg">
+                    <button type="submit" class="customize-button">Customize Now</button>
+                </form>
+            </div>
+
+            <!-- Blazers -->
+            <div class="card">
+                <img src="/assets/mensBlazer.jpeg" alt="Blazers">
+                <h2>Blazers</h2>
+                <p>Stylish blazers to elevate your wardrobe.</p>
+                <p class="price-range">Price: ₹1500 - ₹1800</p>
+                
+                <form action="/customize" method="GET">
+                    <input type="hidden" name="item" value="upperwear">
+                    <input type="hidden" name="productName" value="Blazers">
+                    <input type="hidden" name="image" value="mensBlazer.jpeg">
+                    <button type="submit" class="customize-button">Customize Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

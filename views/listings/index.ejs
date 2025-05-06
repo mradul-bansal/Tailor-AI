@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaapJhok</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/NaapJhok-removebg-preview.png" alt="NaapJhok Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/services/mens">Men's</a></li>
+                        <li><a href="/services/womens">Women's</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="/become-tailor">Become Our Tailor</a></li> -->
+            </ul>
+
+            <div class="actions">
+                <% if (customerName) { %>
+                    <a href="/my-orders" class="btn action1">My Orders</a>
+                    <a href="/logout" class="btn action2">Logout</a>
+                <% } else { %>
+                    <a href="/login/customer" class="btn action1">Login</a>
+                    <a href="/register" class="btn action2">Signup</a>
+                <% } %>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="/assets/sonutailor.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to NaapJhok</h1>
+            <!-- <p>Stitching Happiness at Your Doorstep.</p> -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="video">
+                <video controls autoplay muted loop>
+                    <source src="/assets/mixkit-hand-selecting-through-clothes-23327-hd-ready.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="services-list">
+                <div class="service-item">
+                    <h2>Customize Outfits</h2>
+                    <p>Explore a wide range of custom clothing options tailored to your preferences.</p>
+                </div>
+                <div class="service-item">
+                    <h2>On Device Measurement</h2>
+                    <p>To ensure a perfect fit.</p>
+                </div>
+                <div class="service-item">
+                    <h2>Professional Tailored Cloths</h2>
+                    <p>High quality tailored cloths.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <div class="promo-card">
+            <div class="promo-content">
+                <h1>Get Started Today!</h1>
+                <p>Experience the convenience of custom clothing.</p>
+                <a href="/register" class="cta-btn">Sign Up Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>See what our customers have to say about their experience with NaapJhok.</p>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <h3>Sara Smith</h3>
+                <p class="title">Fashion Enthusiast</p>
+                <p class="description">I was amazed by the quality of the custom clothing I received through NaapJhok. The process was seamless, and the fit was perfect!</p>
+            </div>
+
+            <div class="testimonial-card">
+                <h3>Sara Smith</h3>
+                <p class="title">Fashion Enthusiast</p>
+                <p class="description">I was amazed by the quality of the custom clothing I received through NaapJhok. The process was seamless, and the fit was perfect!</p>
+            </div>
+
+            <div class="testimonial-card">
+                <h3>Emily Brown</h3>
+                <p class="title">Happy Customer</p>
+                <p class="description">NaapJhok made getting professionally tailored outfits so convenient. I love how I can customize every detail to suit my style.</p>
+            </div>
+
+            <div class="testimonial-card">
+                <h3>Emily Brown</h3>
+                <p class="title">Happy Customer</p>
+                <p class="description">NaapJhok made getting professionally tailored outfits so convenient. I love how I can customize every detail to suit my style.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p class="contact-intro">Our customer service team is available to assist you with any inquiries.</p>
+
+        <div class="contact-container">
+            <div class="contact-item">
+                <span class="icon">&#9993;</span> <!-- Email Icon -->
+                <h3>Email</h3>
+                <p>For tailor inquiries or partnership opportunities, contact us at:</p>
+                <a href="mailto:info@naapjhok.com">info@naapjhok.com</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">&#9742;</span> <!-- Phone Icon -->
+                <h3>Phone</h3>
+                <p>Follow us on social media for updates and promotions:</p>
+                <p>+123-456-7890</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">&#127968;</span> <!-- Office Icon -->
+                <h3>Office</h3>
+                <p>We look forward to hearing from you at:</p>
+                <p>123 Main Street, City, Country</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const customerId = "<%= typeof customerId !== 'undefined' ? customerId : '' %>";
+        console.log("Customer ID:", customerId); // This will be empty if not defined
+    </script>
+
+</body>
+</html>

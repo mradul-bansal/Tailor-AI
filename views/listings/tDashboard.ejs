@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailor Dashboard</title>
+  <link rel="stylesheet" href="/css/tDashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Customer Details</h1>
+
+    <table class="customer-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Pincode</th>
+          <th>Address</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% customerForms.forEach(customer => { %>
+          <tr>
+            <td><%= customer.name %></td>
+            <td><%= customer.email %></td>
+            <td><%= customer.phone %></td>
+            <td><%= customer.pincode %></td>
+            <td><%= customer.address %></td>
+            <td><%= customer.date ? customer.date.toLocaleDateString() : 'N/A' %></td>
+
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

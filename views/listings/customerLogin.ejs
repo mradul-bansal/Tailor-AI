@@ -1,0 +1,29 @@
+<!-- views/auth/customerLogin.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <title>Customer Login</title>
+
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Customer Login</h2>
+
+        <form action="/login/customer" method="POST">
+            <label for="identifier">Email or Phone Number:</label>
+            <input type="text" name="identifier" id="identifier" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/register">Register here</a></p>
+    </div>
+</body>
+
+</html>

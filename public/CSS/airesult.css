@@ -1,0 +1,76 @@
+/* airesult.css */
+
+/* Global resets and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f8f9fb;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1e272e;
+    text-align: center;
+}
+
+/* Stylish table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eaecef;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    color: #34495e;
+    width: 50%;
+}
+
+td {
+    color: #2d3436;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Zebra striping */
+tr:nth-child(even) td {
+    background-color: #fbfcfd;
+}
+
+/* Link styling */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+    transform: translateY(-2px);
+}

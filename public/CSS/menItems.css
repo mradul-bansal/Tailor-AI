@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F2E2C9;
+    color: #703E29;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #98572A;
+    margin-bottom: 40px;
+    font-size: 2.5em; /* Increased font size for prominence */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; /* Added padding around cards */
+}
+
+.card {
+    background-color: #ECE7D5;
+    border: 1px solid #DCA977;
+    border-radius: 12px; /* Slightly more rounded corners */
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lifts card on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px 12px 0 0; /* Match rounded corners */
+    transition: transform 0.3s; /* Image transition */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Zoom effect on image hover */
+}
+
+.card h2 {
+    color: #98572A;
+    margin-top: 10px;
+    font-size: 1.5em; /* Slightly larger font for headings */
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 15px; /* Added space below paragraph */
+}
+
+.price-range {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #703E29;
+    font-size: 1.1em; /* Increased font size */
+}
+
+.customize-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #98572A;
+    color: #ECE7D5;
+    padding: 12px 24px; /* Larger button padding */
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-size: 1em; /* Increased font size */
+}
+
+.customize-button:hover {
+    background-color: #703E29;
+    transform: translateY(-3px); /* Lift button on hover */
+}
