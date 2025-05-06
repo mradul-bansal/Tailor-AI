@@ -1,8 +1,4 @@
-Here’s a GitHub-compatible `README.md` file you can use for your project:
 
----
-
-````markdown
 # 🎯 AI-Driven Tailoring Measurement System
 
 This project is a smart measurement system designed for tailoring services, where customers can enter their body measurements manually or submit images for AI-based measurement predictions. It streamlines the tailoring workflow and reduces human error, helping tailors provide accurate fits for their clients.
